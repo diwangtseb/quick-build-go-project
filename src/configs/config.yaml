@@ -1,2 +1,25 @@
-project_name: "test_project_one"
-version: "0.0.1"
+project_name: project_structure_example
+version: 0.0.1
+project_dir:
+  - /api
+  - /assets
+  - /build
+  - /cmd
+  - /configs
+  - /deploy
+  - /docs
+  - /examples
+  - /githooks
+  - /init
+  - /internal
+  - /pkg
+  - /scripts
+  - /test
+  - /third_party
+  - /tools
+  - /vendor
+  - /web
+  - /websites
+project_root_file:
+  - /.gitignore
+  - /Makefile

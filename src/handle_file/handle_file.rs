@@ -3,9 +3,6 @@ use std::fs::OpenOptions;
 use std::io;
 use std::path::Path;
 
-fn main() {
-    println!("Build go projects quickly with Rust about FileCreate");
-}
 
 pub fn mkdir(dir_name: &str){
     fs::create_dir_all(dir_name).unwrap_or_else(|why|{

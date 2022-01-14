@@ -8,6 +8,8 @@ use serde::{Serialize,Deserialize};
 pub struct Config {
    pub project_name: String,
    pub version: String,
+   pub project_dir: Vec<String>,
+   pub project_root_file: Vec<String>
 }
 
 pub fn read_config() -> Config{
