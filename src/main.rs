@@ -1,7 +1,8 @@
 pub mod configs;
 pub mod handle_file;
+pub mod args;
 
-use std::env;
+use clap::Parser;
 use configs::{configs::{read_config,Config}};
 use handle_file::{handle_file::{mkdir,quick_touch}};
 
@@ -10,16 +11,13 @@ fn main() {
     create_dir_by_config()
 }
 
-fn read_cmd_args() -> String{
-    let args: Vec<String> = env::args().collect();
-    println!("{:?}",args);
-    if args.len() < 3 {
-        return String::from("");
-    };
-    if args[2] == "" {
-        panic!("{:?}",args)
-    };
-    args[2].clone()
+fn read_cmd_args() -> String {
+    let _args = args::args::Args::parse();
+    if _args.defines.len() < 1{
+        println!("please pass --help else generate default configuration");
+        return String::from("")
+    }
+    return _args.defines[0].1.clone()
 }
 
 fn create_dir_by_config(){
