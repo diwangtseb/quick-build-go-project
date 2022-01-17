@@ -14,5 +14,5 @@ Used to quickly generate the GO project structure
 
 #### How to run about release:
 ```
-    ./quick-build-go-project -D foo=bar;
+    ./quick-build-go-project -D prj=bar;
 ```
