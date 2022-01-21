@@ -1,7 +1,9 @@
 pub mod configs;
 pub mod handle_file;
 pub mod args;
+pub mod template_go;
 
+use template_go::{template_go::GoTemplate};
 use clap::Parser;
 use configs::{configs::{read_config,Config}};
 use handle_file::{handle_file::{mkdir,quick_touch}};
@@ -37,4 +39,7 @@ fn create_dir_by_config(){
         let temp_file:&str = &(project_name.clone()+&file);
         quick_touch(temp_file);
     }
+}
+
+fn create_file_by_language_template(){
 }
