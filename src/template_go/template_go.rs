@@ -1,4 +1,3 @@
-use std::error::Error;
 use std::io::prelude::*;
 use std::fs::File;
 use std::path::Path;
@@ -16,7 +15,7 @@ impl GoTemplate {
             default_content:default_content
         }; 
         let _path = Path::new(&path);
-        let display = _path.display();
-        let mut file = File::create(&_path).unwrap().write_all(gt.default_content.as_bytes());
+        let _= _path.display();
+        let _ = File::create(&_path).unwrap().write_all(gt.default_content.as_bytes()).unwrap();
     }
 }
