@@ -18,7 +18,7 @@ Used to quickly generate the GO project structure
 ```
 
 #### support language template have:
-``
-    go 
+```
+    go  
         gin
 ```
