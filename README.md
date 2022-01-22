@@ -16,3 +16,9 @@ Used to quickly generate the GO project structure
 ```
     ./quick-build-go-project --path foorbar;
 ```
+
+#### support language template have:
+``
+    go 
+        gin
+```
