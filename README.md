@@ -9,12 +9,12 @@ Used to quickly generate the GO project structure
 
 #### How to run local:
 ```
-    cargo run . foobar
+    cargo run . project=foobar
 ```
 
 #### How to run about release:
 ```
-    ./quick-build-go-project --path foorbar;
+    ./quick-build-go-project project=foorbar;
 ```
 
 #### support language template have:
