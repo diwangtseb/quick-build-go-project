@@ -17,9 +17,10 @@ project_dir:
   - /test
   - /third_party
   - /tools
-  - /vendor
   - /web
   - /websites
 project_root_file:
   - /.gitignore
   - /Makefile
+  - /go.mod
+  - /go.sum
