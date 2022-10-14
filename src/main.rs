@@ -39,7 +39,7 @@ fn create_dir_by_config(){
         let temp_file:&str = &(project_name.clone()+&file);
         quick_touch(temp_file);
     }
-    let path = &(project_name.clone()+&(String::from("/api/main.go")));
+    let path = &(project_name.clone()+&(String::from("/cmd/main.go")));
     GoTemplate::create(String::from("main"),String::from(r#"
 package main
 
