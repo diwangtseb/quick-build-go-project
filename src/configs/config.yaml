@@ -1,24 +1,26 @@
 project_name: project_structure_example
 version: 0.0.1
-project_dir:
-  - /api
-  - /assets
-  - /build
-  - /cmd
-  - /configs
-  - /deploy
-  - /docs
-  - /examples
-  - /githooks
-  - /init
-  - /internal
-  - /pkg
-  - /scripts
-  - /test
-  - /third_party
-  - /tools
-  - /web
-  - /websites
+http:
+  project_dir:
+    - /api
+    - /assets
+    - /build
+    - /cmd
+    - /configs
+    - /deploy
+    - /docs
+    - /examples
+    - /githooks
+    - /init
+    - /internal
+    - /pkg
+    - /scripts
+    - /test
+    - /third_party
+    - /tools
+    - /web
+    - /websites
+grpc:
 project_root_file:
   - /.gitignore
   - /Makefile

@@ -11,3 +11,4 @@ description = "quickly build go project"
 serde = { version = "1", features = ["derive"] }
 serde_yaml = "0.8"
 clap = { version = "3.0.7", features = ["derive"] }
+serde_json = "*"
