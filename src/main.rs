@@ -31,7 +31,7 @@ fn create_dir_by_config(){
         project_name = cfg.project_name;
     }
     mkdir(&project_name);
-    for dir in cfg.project_dir{
+    for dir in cfg.http.project_dir{
         let temp_dir:&str = &(project_name.clone()+&dir);
         mkdir(temp_dir);
     }

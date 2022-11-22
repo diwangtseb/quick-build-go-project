@@ -7,16 +7,16 @@ use serde::{Serialize,Deserialize};
 
 #[derive(Serialize, Deserialize)]
 pub struct Config{
-    project_name: String,
-    version: String,
-    http: Http,
-    grpc: Option<serde_json::Value>,
-    project_root_file: Vec<String>,
+    pub project_name: String,
+    pub version: String,
+    pub http: Http,
+    pub grpc: Option<serde_json::Value>,
+    pub project_root_file: Vec<String>,
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct Http {
-    project_dir: Vec<String>,
+    pub project_dir: Vec<String>,
 }
 
 
