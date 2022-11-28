@@ -6,7 +6,7 @@ pub mod cmd;
 
 use template_go::template_gin_go::{GoTemplate, self};
 use clap::Parser;
-use configs::configs::{read_config,Config};
+use configs::configs::{read_config,Config, HttpType};
 use handle_file::handle_file::{mkdir,quick_touch};
 
 fn main() {
