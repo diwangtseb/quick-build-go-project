@@ -1,1 +1,1 @@
-pub mod template_go;
+pub mod template_gin_go;

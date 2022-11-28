@@ -3,13 +3,13 @@ pub mod handle_file;
 pub mod args;
 pub mod template_go;
 
-use template_go::{template_go::GoTemplate};
+use template_go::template_gin_go::{GoTemplate, self};
 use clap::Parser;
-use configs::{configs::{read_config,Config}};
-use handle_file::{handle_file::{mkdir,quick_touch}};
+use configs::configs::{read_config,Config};
+use handle_file::handle_file::{mkdir,quick_touch};
 
 fn main() {
-    println!("Build go projects quickly with Rust");
+    println!("build go projects quickly with rust");
     create_dir_by_config();
 }
 
@@ -40,20 +40,6 @@ fn create_dir_by_config(){
         quick_touch(temp_file);
     }
     let path = &(project_name.clone()+&(String::from("/cmd/main.go")));
-    GoTemplate::create(String::from("main"),String::from(r#"
-package main
-
-import "github.com/gin-gonic/gin"
-
-func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
-}
-            "#),path.clone()); 
+    GoTemplate::create(String::from("main"),template_gin_go::GIN_TEMPLATE_STR.to_owned(),path.clone()); 
 }
 
