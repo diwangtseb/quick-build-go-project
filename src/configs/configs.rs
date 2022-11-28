@@ -19,6 +19,11 @@ pub struct Http {
     pub project_dir: Vec<String>,
 }
 
+#[derive(Serialize, Deserialize)]
+pub struct Grpc {
+    pub grpc_type: Vec<String>,
+}
+
 
 pub fn read_config() -> Config{
     let yaml_str = include_str!("./config.yaml");

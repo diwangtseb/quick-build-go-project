@@ -14,7 +14,7 @@ impl GoTemplate {
         default_content = GIN_TEMPLATE_STR.to_owned();
         let gt = GoTemplate {
             package_name: pkg_name,
-            default_content:default_content
+            default_content
         }; 
         let _path = Path::new(&path);
         let _= _path.display();

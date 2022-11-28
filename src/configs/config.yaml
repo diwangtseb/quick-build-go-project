@@ -21,6 +21,8 @@ http:
     - /web
     - /websites
 grpc:
+  grpc_type:
+    - kratos
 project_root_file:
   - /.gitignore
   - /Makefile
