@@ -2,6 +2,7 @@ pub mod configs;
 pub mod handle_file;
 pub mod args;
 pub mod template_go;
+pub mod cmd;
 
 use template_go::template_gin_go::{GoTemplate, self};
 use clap::Parser;
@@ -19,6 +20,7 @@ fn read_cmd_args() -> String {
         println!("please pass --help else generate default configuration");
         return String::from("")
     }
+    print!("{:?}",_args.defines[0].1.clone());
     return _args.defines[0].1.clone()
 }
 
